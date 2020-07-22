@@ -42,6 +42,7 @@ Note:
 
 MySQL
 
+
 SELECT
     class, COUNT(DISTINCT student)
 FROM

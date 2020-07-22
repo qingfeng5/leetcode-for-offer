@@ -43,6 +43,7 @@ WHERE
 
 MySQL
 
+
 SELECT p1.*
 FROM Person p1,
     Person p2
