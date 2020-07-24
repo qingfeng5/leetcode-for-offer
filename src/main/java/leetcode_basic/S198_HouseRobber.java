@@ -49,7 +49,6 @@ public class S198_HouseRobber {
         return tryRob(nums, 0);
     }
 
-    // 考虑抢劫nums[index...nums.size())这个范围的所有房子
     private int tryRob(int[] nums, int index){
 
         if(index >= nums.length)

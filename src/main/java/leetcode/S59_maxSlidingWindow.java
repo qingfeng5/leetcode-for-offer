@@ -27,22 +27,28 @@ public class S59_maxSlidingWindow {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int numLen = nums.length;
         if (numLen == 0) return new int[0];
-        int[] ans = new int[numLen - k + 1]; // 保存结果
-        int left = -1; // 左指针
-        int right = k - 2; // 右指针
-        int max = left; // 最大值指针  使用最大值指针max指向当前的最大值
+        //// 保存结果
+        int[] ans = new int[numLen - k + 1];
+        // 左指针
+        int left = -1;
+        /// 右指针
+        int right = k - 2;
+        // 最大值指针  使用最大值指针max指向当前的最大值
+        int max = left;
 
         while (right < numLen - 1) {
             left++;
             right++;
-            if (max < left) { // 更新最大值
+            // // 更新最大值
+            if (max < left) {
                 max = left;
                 for (int i = left; i <= right; i++) {
                     max = nums[max] < nums[i] ? i : max;
                 }
             }
             else
-                max = nums[max] < nums[right] ? right : max; // 更新最大值
+                // 更新最大值
+                max = nums[max] < nums[right] ? right : max;
             ans[left] = nums[max];
         }
         return ans;

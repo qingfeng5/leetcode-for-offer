@@ -16,11 +16,12 @@ import java.util.HashMap;
  * 输出: 2
  */
 public class S39_majorityElement_02 {
-    //HashMap方法：不是双百解法，但是容易理解，且普适性强，并考虑了数组中不存在满足条件的众数和数组为空的情况
+    /**HashMap方法：不是双百解法，但是容易理解，且普适性强，并考虑了数组中不存在满足条件的众数和数组为空的情况**/
     public int majorityElement(int[] nums) {
         HashMap<Integer,Integer> map = new HashMap<>();
         int length = nums.length/2;
         for(int i=0;i<nums.length;i++){
+            //containsKey（key）方法是判断该key在map中是否有key存在。如果存在则返回true。如果不存在则返回false。
             if(map.containsKey(nums[i])) {
                 //这里不能直接map.get(nums[i])++;
                 map.put(nums[i],map.get(nums[i])+1);
@@ -32,6 +33,7 @@ public class S39_majorityElement_02 {
             //按照题目要求，必须众数次数超过长度的一半，则有第一个判断条件，相当于剪枝，当然下面的第一个判断条件也可以不加
             if(i>=length&&map.get(nums[i])>length) return nums[i];
         }
-        return 0;//当不存在满足要求的数字或者数组长度为0时
+        return 0;
+        //当不存在满足要求的数字或者数组长度为0时
     }
 }
