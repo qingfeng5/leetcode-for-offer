@@ -27,7 +27,7 @@ import java.util.Set;
  * 输出: True
  *
  * 除大小王外，所有牌 无重复 ；
- * 设此 55 张牌中最大的牌为 maxmax ，最小的牌为 minmin （大小王除外），则需满足：
+ * 设此 5 张牌中最大的牌为 max ，最小的牌为 min（大小王除外），则需满足：
  * max - min < 5
  * max−min<5
  */
@@ -35,9 +35,9 @@ public class S61_isStraight_02 {
     public boolean isStraight(int[] nums) {
         //先对数组执行排序。
         //判别重复： 排序数组中的相同元素位置相邻，因此可通过遍历数组，
-        // 判断 nums[i] = nums[i + 1]nums[i]=nums[i+1] 是否成立来判重。
+        // 判断 nums[i] = nums[i + 1] 是否成立来判重。
         //获取最大 / 最小的牌： 排序后，数组末位元素 nums[4]nums[4] 为最大牌；
-        // 元素 nums[joker]nums[joker] 为最小牌，其中 jokerjoker 为大小王的数量。
+        // 元素 nums[joker] 为最小牌，其中joker为大小王的数量。
 
         int joker = 0;
         Arrays.sort(nums); // 数组排序

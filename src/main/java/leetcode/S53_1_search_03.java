@@ -18,7 +18,7 @@ package leetcode;
  * 输入: nums = [5,7,7,8,8,10], target = 6
  * 输出: 0
  */
-public class S53_1_search {
+public class S53_1_search_03 {
     //初始化： 左边界 i = 0i=0 ，右边界 j = len(nums) - 1 。
     //循环二分： 当闭区间 [i, j] 无元素时跳出；
     //计算中点 m = (i + j) / 2（向下取整）；
@@ -31,30 +31,31 @@ public class S53_1_search {
     //返回值： 应用两次二分，分别查找 right 和 left ，最终返回 right - left - 1 即可。
 
     public int search(int[] nums, int target) {
-        // 搜索右边界 right
-        int i = 0, j = nums.length - 1;
-        while(i <= j) {
-            int m = (i + j) / 2;
-            if(nums[m] <= target) i = m + 1;
-            else j = m - 1;
-        }
-        int right = i;
-        // 若数组中无 target ，则提前返回
-        if(j >= 0 && nums[j] != target) return 0;
-        // 搜索左边界 right
-        i = 0; j = nums.length - 1;
-        while(i <= j) {
-            int m = (i + j) / 2;
-            if(nums[m] < target) i = m + 1;
-            else j = m - 1;
-        }
-        int left = j;
-        return right - left - 1;
-    }
+        int l = 0, r = nums.length-1;
 
+        int count =0;
+        while (l<=r){
+            int mid = (l + r)/2;
+            if (nums[mid] <= target){
+                if (nums[mid] == target){
+                    count++;
+                }
+                l= mid + 1;
+               // i = mid;
+            }
+//            else if( nums[mid] < target){
+//                l= mid + 1;
+//            }
+            else if (nums[mid]> target){
+                r = mid -1;
+            }
+        }
+        return count;
+
+    }
     public static void main(String[] args) {
         int[] num ={5,7,7,8,8,10};
         int target = 8;
-        System.out.println(new S53_1_search().search(num,target));
+        System.out.println(new S53_1_search_03().search(num,target));
     }
 }

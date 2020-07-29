@@ -43,11 +43,12 @@ public class S48_lengthOfLongestSubstring {
 
         while(r < cs.length){
             //如果cMap[s[r]] <= l表示该字符在l到r的窗口中未出现过,ans 取 r-l+1与ans 的较大值，回到3
-            if(cMap[cs[r]] <= l)
-                ans = Math.max(r-l+1,ans);
-            else
+            if(cMap[cs[r]] <= l){
+                ans = Math.max(r-l+1,ans);}
+            else {
                 //当cMap[s[r]] > l 表示该字符在l到r的窗口中出现过，令l=cMap[s[r]],则该字符就未在l到r中出现，回到3
                 l = cMap[cs[r]];
+            }
             cMap[cs[r]] = r+1;
             ++r;
         }
