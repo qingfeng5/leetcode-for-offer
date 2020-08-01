@@ -15,7 +15,7 @@ package leetcode_basic;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-public class S1_twoSum {
+public class SL1_twoSum {
     public int[] twoSum(int[] nums, int target) {
 
         if (nums.length < 2){
