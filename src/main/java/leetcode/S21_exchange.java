@@ -32,4 +32,9 @@ public class S21_exchange {
         }
         return nums;
     }
+
+    public static void main(String[] args) {
+        int[] nums ={1,2,3,4};
+        System.out.println(new S21_exchange().exchange(nums));
+    }
 }
