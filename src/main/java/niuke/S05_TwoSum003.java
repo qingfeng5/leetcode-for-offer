@@ -4,7 +4,7 @@ package niuke;
  * @author 清风
  * @date 2020/4/25 12:39
  */
-public class TwoSum003 {
+public class S05_TwoSum003 {
     public int[] twoSum(int[] numbers, int target) {
 
         if(numbers.length < 2 /*|| !isSorted(numbers)*/)
@@ -43,6 +43,6 @@ public class TwoSum003 {
 
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        printArr((new TwoSum003()).twoSum(nums, target));
+        printArr((new S05_TwoSum003()).twoSum(nums, target));
     }
 }

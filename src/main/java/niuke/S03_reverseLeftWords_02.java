@@ -17,7 +17,7 @@ package niuke;
  * 输入: s = "lrloseumgh", k = 6
  * 输出: "umghlrlose"
  */
-public class S58_reverseLeftWords_02 {
+public class S03_reverseLeftWords_02 {
     public String reverseLeftWords(String s, int n) {
         //新建一个StringBuilder，记为 res ；
         StringBuilder res = new StringBuilder();
