@@ -31,7 +31,7 @@ public class SL1_twoSum {
             else if (l<r && nums[l] + nums[r] <target ){
                 l++;
             }
-            else (nums[l] + nums[r] > target) {
+            else if(nums[l] + nums[r] > target) {
                 r--;
             }
 

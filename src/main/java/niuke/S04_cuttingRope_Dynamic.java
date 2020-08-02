@@ -34,7 +34,7 @@ package niuke;
  *  *
 
  **/
-public class S14_cuttingRope_Dynamic {
+public class S04_cuttingRope_Dynamic {
 
     public int integerBreak(int n) {
 
@@ -63,7 +63,7 @@ public class S14_cuttingRope_Dynamic {
 
     public static void main(String[] args) {
 
-        System.out.println((new S14_cuttingRope_Dynamic()).integerBreak(2));
-        System.out.println((new S14_cuttingRope_Dynamic()).integerBreak(10));
+        System.out.println((new S04_cuttingRope_Dynamic()).integerBreak(2));
+        System.out.println((new S04_cuttingRope_Dynamic()).integerBreak(10));
     }
 }
