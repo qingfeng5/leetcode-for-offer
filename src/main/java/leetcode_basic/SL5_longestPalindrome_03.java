@@ -29,6 +29,7 @@ public class SL5_longestPalindrome_03 {
         int maxLen = 1;
         int begin = 0;
 
+        int count = 0;
         // dp[i][j] 表示 s[i, j] 是否是回文串
         boolean[][] dp = new boolean[len][len];
         char[] charArray = s.toCharArray();

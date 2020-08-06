@@ -1,33 +1,23 @@
-package leetcode;
+package niuke;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
- * @Classname: qingfeng
- * @Author: 清风
- * @Date: 2020/7/27 20:35
- *
- * 剑指 Offer 48. 最长不含重复字符的子字符串
- * 请从字符串中找出一个最长的不包含重复字符的子字符串，计算该最长子字符串的长度。
- *
- * 示例 1:
- * 输入: "abcabcbb"
- * 输出: 3
- * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
- * 示例 2:
- *
- * 输入: "bbbbb"
- * 输出: 1
- * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
- * 示例 3:
- *
- * 输入: "pwwkew"
- * 输出: 3
- * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
- *      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+ * Created by 清风
+ * 2020/8/6 16:18
  */
-public class S48_lengthOfLongestSubstring {
+public class S06_input_str_02 {
+    public static void main(String[] args) {
+        System.out.println("请输入你要判断的字符串");
+        Scanner sca=new Scanner(System.in);
+        String str=sca.nextLine();
+        System.out.println("接受到得字符串"+str);
+        int n = new S06_input_str_02().lengthOfLongestSubstring(str);
+        System.out.println(n);
+    }
+
     //滑动窗口
     public int lengthOfLongestSubstring(String s) {
         if(s==null||s.isEmpty())

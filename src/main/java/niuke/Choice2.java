@@ -16,15 +16,15 @@ public class Choice2 {
         for (int i = 0; i < N; i++) {
             dist[i] = sc.nextInt();
         }
-        long i = new Solution1().totalProgram(dist, D);
+        long i = new Choice2().totalProgram(dist, D);
         System.out.println(i);
     }
-}
 
- class Solution1 {
-    private final int mod = 99997867;
-    private long ans = 0;
+
     public long totalProgram(int[] dist, int D) {
+
+        final int mod = 99997867;
+        long ans = 0;
         for (int i = 0,j = 0;i<dist.length;i++){
             while (i >= 2 && (dist[i] - dist[j]) > D)
                 j++;
