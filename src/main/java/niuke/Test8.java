@@ -39,6 +39,7 @@ public class Test8 {
         while (l<r){
             if (Character.toLowerCase(word.charAt(l)) !=  Character.toLowerCase(word.charAt(r))){
                 addword(s);
+                break;
             }
             ++l;
             --r;
@@ -47,17 +48,38 @@ public class Test8 {
 
     }
     public String addword(String s){
-        StringBuffer word = new StringBuffer();
-        char[] m = new char[300];
-        char[] w = new char[300];
-        for (int i = s.length(); i >=0 ; i--) {
-            word.append(m[i]);
-        }
-//        for (int i = 0; i <s.length(); i++) {
-//            word.append(w[i]);
+//        StringBuffer word = new StringBuffer();
+//        char[] m = s.toCharArray();
+//        char[] w = new char[300];
+//        String X ="";
+//        for (int i = m.length-1; i >=0 ; i--) {
+//            X +=  m[i];
+//            //word.append(m[i]);
 //        }
+////        for (int i = 0; i <s.length(); i++) {
+////            word.append(w[i]);
+////        }
+//        //word.append(s);
+//        //word.append(s).append(m);
+//
+//        String F="";
+//        s = s+X;
+//       return  s;
 
-        //word.append(s);
-        return (s+m).trim().toString();
+        char[] h = s.toCharArray();
+        if(h == null || h.length == 0) return s;
+
+       // char[] h = new char[300];
+        int left = 0;
+
+        int right = h.length-1;
+        while(left < right) {  //奇数个的时候中间元素不动
+            char temp = h[left];
+            h[left] = h[right];
+            h[right] = temp;
+            left++;
+            right--;
+        }
+        return s;
     }
 }
