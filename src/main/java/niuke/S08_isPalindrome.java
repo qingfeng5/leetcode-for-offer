@@ -7,8 +7,9 @@ import java.util.Stack;
  * @Classname: qingfeng
  * @Author: 清风
  * @Date: 2020/8/20 19:34
+ * 判断回文链表
  */
-public class Test11 {
+public class S08_isPalindrome {
     /**
      * 判断是否为回文链表
      * @param head ListNode类 链表头
