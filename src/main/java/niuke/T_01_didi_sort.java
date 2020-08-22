@@ -35,6 +35,6 @@ public class T_01_didi_sort {
             }
         }
         System.out.println(res.size());
-        res.forEach(s -> System.out.println(s));
+//        res.forEach(System.out.println(s));
     }
 }
