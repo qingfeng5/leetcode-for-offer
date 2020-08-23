@@ -11,25 +11,32 @@ public class Test11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String res = null;
-        for (int i = 0; i < n; i++) {
-             res = sc.nextLine();
+        String res ="";
+        for (int i = 0; i <3; i++) {
+            res = sc.nextLine();
         }
-        int num = new Test11().length(res);
+        int num = new Test11().length(n,res);
         System.out.println(num);
     }
-    public int length(String res){
+    public int length(int n,String res){
 
         char[] c =res.toCharArray();
         int count =0;
         String len ="";
-        for (int i = 0; i <c.length ; i++) {
+        int l = 0;
+
+        for (int i = 0; i <n ; i++) {
             //char ch =  res.charAt(i);
-            len = Integer.toBinaryString(c[i]);
-            if (len.length()<=10){
-                count++;
+
+            while (l < c.length){
+                if (c.length<=10 ){
+                    if ((c[l] != ' ') ){
+                        count++;
+                    }
+                }
             }
         }
         return count;
+
     }
 }
