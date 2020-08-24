@@ -51,22 +51,22 @@ public class T_10_space_num_differ {
         for (int i = 0; i < N; i++) {
             dist[i] = sc.nextInt();
         }
-        long i = new Solution().totalProgram(dist, D);
+        long i = new T_10_space_num_differ().totalProgram(dist, D);
         System.out.println(i);
     }
-}
-class Solution {
-    private final int mod = 99997867;
-    private long ans = 0;
+
     public long totalProgram(int[] dist, int D) {
-        for (int i = 0,j = 0;i<dist.length;i++){
-            while (i >= 2 && (dist[i] - dist[j]) > D)
-                j++;
-            ans += computeCn(i - j);
-        }
-        return ans % mod;
+        final int mod = 99997867;
+        long ans = 0;
+            for (int i = 0, j = 0; i < dist.length; i++) {
+                while (i >= 2 && (dist[i] - dist[j]) > D)
+                    j++;
+                ans += computeCn(i - j);
+            }
+            return ans % mod;
+
     }
-    private long computeCn(long n) {
+    private long computeCn ( long n){
         return n * (n - 1) / 2;
     }
 }

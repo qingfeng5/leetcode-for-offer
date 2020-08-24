@@ -9,17 +9,31 @@ import java.util.Scanner;
 public class Test12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        //打印输出n行数组
-        int x[] = new int[n];
-        for (int i = 0; i < n; i++)
-            x[i] = sc.nextInt();
-
-        //打印输出两行字符串
-        StringBuilder[] strs = new StringBuilder[n];
-        for (int i=0;i<n;i++){
-            strs[i] = new StringBuilder(sc.next());
+        String s = sc.next();
+        StringBuffer word = new StringBuffer();
+        char[] w = s.toCharArray();
+        for (int i = 0; i < w.length-1 ; i++) {
+            word.append(w[i]);
         }
-        System.out.println(strs);
+
+        char[] str = new char[3000];
+        if (w.length > 3000){
+            return;
+        }
+        int l =0;
+        for (int i = 0; i <w.length-1 ; i++) {
+            if ((w[i] != 'n')){
+                str[i] = w[i];
+                l++;
+            }
+            else {
+                str[i] =w[i-1];
+            }
+            else if (l<w.length-1){
+
+            }
+        }
+
+        System.out.println(str.toString());
     }
 }
