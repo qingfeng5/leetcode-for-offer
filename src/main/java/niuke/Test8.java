@@ -10,6 +10,12 @@ import java.util.Scanner;
  * @Classname: qingfeng
  * @Author: 清风
  * @Date: 2020/8/8 15:06
+ * 将字符串输出为最短回文字符串
+ * 输入  abc
+ * 输出  abcb
+ *
+ * 输入  noo
+ * 输出  noon
  */
 public class Test8 {
     public static void main(String[] args) {

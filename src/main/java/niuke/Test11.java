@@ -1,5 +1,9 @@
 package niuke;
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -8,14 +12,16 @@ import java.util.Scanner;
  * @Date: 2020/8/22 20:44
  */
 public class Test11 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        String res ="";
-        for (int i = 0; i <3; i++) {
-            res = sc.nextLine();
+    public static void main(String[] args) throws IOException {
+        System.out.println("请输入一个整数:");
+        Scanner scanner=new Scanner(System.in);
+        int n=scanner.nextInt();
+        String temp="";
+        for(int i=1;i<=n;i++){
+            System.out.println("请输入第"+i+"行字符串");
+            temp += scanner.next();
         }
-        int num = new Test11().length(n,res);
+        int num = new Test11().length(n,temp);
         System.out.println(num);
     }
     public int length(int n,String res){

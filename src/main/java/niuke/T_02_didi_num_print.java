@@ -6,6 +6,7 @@ import java.util.Scanner;
  * @Classname: qingfeng
  * @Author: 清风
  * @Date: 2020/8/21 20:00
+ * 蛇形螺旋矩阵打印（逆时针） +  费不纳妾数列
  */
 public class T_02_didi_num_print {
 
