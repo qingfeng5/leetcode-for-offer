@@ -44,7 +44,7 @@ public class Test8 {
         int l = 0, r = n-1;
         while (l<r){
             if (Character.toLowerCase(word.charAt(l)) !=  Character.toLowerCase(word.charAt(r))){
-                addword(s);
+                s=addword(s);
                 break;
             }
             ++l;

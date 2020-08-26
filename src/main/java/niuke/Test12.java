@@ -15,25 +15,11 @@ public class Test12 {
         for (int i = 0; i < w.length-1 ; i++) {
             word.append(w[i]);
         }
+        String[] str = s.split("\\n");
 
-        char[] str = new char[3000];
-        if (w.length > 3000){
-            return;
+        for (int i = 0; i < str.length; i++) {
+            System.out.println(str[i]);
         }
-        int l =0;
-        for (int i = 0; i <w.length-1 ; i++) {
-            if ((w[i] != 'n')){
-                str[i] = w[i];
-                l++;
-            }
-            else {
-                str[i] =w[i-1];
-            }
-            else if (l<w.length-1){
-
-            }
-        }
-
         System.out.println(str.toString());
     }
 }
