@@ -32,6 +32,7 @@ public class S58_01_reverseWords {
         while(i >= 0) {
             while(i >= 0 && s.charAt(i) != ' ')
                 i--; // 搜索首个空格
+            //s.substring(i + 1, j + 1从索引i+1 到索引j+1位置
             res.append(s.substring(i + 1, j + 1) + " "); // 添加单词
             while(i >= 0 && s.charAt(i) == ' ')
                 i--; // 跳过单词间空格

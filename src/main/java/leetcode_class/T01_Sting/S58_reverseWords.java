@@ -37,6 +37,7 @@ public class S58_reverseWords {
                 i--;
 
             // 添加单词
+            //s.substring(i + 1, j + 1从索引i+1 到索引j+1位置
             res.append(s.substring(i + 1, j + 1) + " ");
 
             // 跳过单词间空格
