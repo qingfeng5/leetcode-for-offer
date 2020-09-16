@@ -55,8 +55,6 @@ public class Test20 {
         for(int res_i=0; res_i < res.size(); res_i++) {
             System.out.println(String.valueOf(res.get(res_i)));
         }
-
     }
-
 
 }

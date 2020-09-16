@@ -26,7 +26,7 @@ import java.util.HashMap;
  * 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
  *      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
  */
-public class SL_03_lengthOfLongestSubstring {
+public class    SL_03_lengthOfLongestSubstring {
     // TODO: 2020/8/12  滑动窗口 | 无重复字符的最长子串
     public int lengthOfLongestSubstring(String s) {
         if (s.length()==0) return 0;
